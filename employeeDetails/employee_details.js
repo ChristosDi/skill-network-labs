@@ -30,5 +30,11 @@ function  findEmployeeById(employeeId){
 };
 
 function displaySpecialization(){
-
+    const askSpecialization = prompt("Enter the specialization:");
+    const foundEmployee =employees.find(employee => employee.specialization === askSpecialization);
+    if (foundEmployee) {
+        document.getElementById('employeesDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.specialization}</p>`
+    } else{
+        document.getElementById('employeesDetails').innerHTML = 'no employee has been found with this ID';
+    }
 };
