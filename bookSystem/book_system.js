@@ -37,3 +37,9 @@ function clearInputs(){
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
 };
+
+function deletebook(){
+    let index = parseInt(prompt("Enter the no. of the book you would like to delete: "));
+    books.splice(index-1, 1);
+    showbooks();
+};
